@@ -16,7 +16,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
+    margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
@@ -439,8 +439,27 @@ img{
     margin: 0 auto;
 }
 
+.section_title{
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+    /* identical to box height */
+    padding-bottom: 10px;
+    position: relative;
+    color: #102746;
+}
 
+.section_title::after{
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
 
+    width: 253px;
+    height: 3px;
+    background: #006DFE;
+}
 
 /*  Header styles start  */
 
@@ -662,17 +681,12 @@ color: #FFFFFF;
 /*  Trip styles start  */
 
 .trip_title{
-    font-weight: 500;
-    font-size: 35px;
-    line-height: 42px;
-    /* identical to box height */
-    
-    
-    color: #102746;
+    margin-right: 15px;
 }
 
 .view_all{
     display: inline-block;
+    padding-right: 59px;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -681,6 +695,8 @@ color: #FFFFFF;
     background: url(../img/svg/arrow.svg) no-repeat 95% center;
     text-decoration: none;
     color: #006DFE;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .view_all:active, .view_all:focus, .view_all:hover{
@@ -688,7 +704,27 @@ color: #FFFFFF;
     background: url(../img/svg/arrow.svg) no-repeat right center;
 }
 
+.trip_caption{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;
+}
 
+.places_cards{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+}
+
+.places_card_first_row{
+    grid-column: span 3;
+}
+
+.places_card_second_row{
+    grid-column: span 2;
+}
 
 
 /*  Trip styles end  */
