@@ -540,6 +540,7 @@ color: #FFFFFF;
 .search_form-info{
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 153px;
 }
 
 .search_form-field{
@@ -712,10 +713,16 @@ color: #FFFFFF;
     margin-bottom: 36px;
 }
 
+.places_card{
+    position: relative;
+    overflow: hidden;
+}
+
 .places_cards{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 10px;
+    margin-bottom: 131px;
 }
 
 .places_card_first_row{
@@ -726,6 +733,28 @@ color: #FFFFFF;
     grid-column: span 2;
 }
 
+.places_card-pic{
+    height: 354px;
+    width: 100%;
+    object-fit: cover;
+    transform: scale(1.08);
+    transition: .2s all;
+}
+
+.places_card-pic:hover, .places_card-pic:focus{
+    transform: scale(1.1);
+}
+
+.places_card-title{
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    /* identical to box height */
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 27px;
+    left: 29px;
+}
 
 /*  Trip styles end  */
 
